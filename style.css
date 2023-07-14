@@ -1,0 +1,522 @@
+*{
+    padding: 0; margin: 0; box-sizing: border-box;
+
+}
+
+body{
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+:root{
+
+    --primary: indianred;
+    --secondary: rgba(15,10,29,.849);
+    --light: #2f3640;
+
+}
+
+header{
+
+    width: 100%;
+    height: 100vh;
+}
+
+.nav1{
+
+    width: 100%;
+    height: 80px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 2px 0px 3px gray;
+    text-align: center;
+
+}
+
+.nav1 .left{
+    flex-basis: 50%;
+    letter-spacing: 2px;
+}
+.nav1 .left a{
+    text-decoration: none; 
+    /* to remove the underline` */
+    color: var(--primary);
+    font-weight: bold;
+    margin: 0px 5px;
+    /* to give the gap between two links here wwe give margin tag  */
+
+}
+
+.right{
+    flex-basis: 50%;
+}
+
+.right i{
+    font-size: 20px;
+    margin: 0px  15px;
+    /* margin : top-bottom , left-right */
+    background-color: var(--primary);
+    color:white;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.4 ease-in-out;
+
+}
+
+.nav1.right i:hover{
+    transform: rotate(360deg);
+}
+
+
+/* isse chatgpt se alag alag tag ke baare main explore karna hai. */
+
+.nav2{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align:center;
+
+}
+
+.nav2 .nav2-left,.nav2 .nav2-center,.nav2 .nav2-right{
+        flex-basis: 30%;
+        /* to set the width of those three */
+        margin: auto;
+        cursor:pointer;
+
+}
+
+.nav2 .nav2-left i{
+    margin-left: 15px;
+}
+
+.nav2 .nav2-center h1{
+    color: var(--primary);
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+/* dukan ko black kardiya hai jo span tag main likha hua tha */
+.nav2 .nav2-center h1 span{
+    color: var(--secondary);
+}
+
+.nav2 .nav2-center p{
+    color: grey;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.nav2 .nav2-right{
+    margin: 0px 5px;
+}
+
+.nav3{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+
+.nav3 ul{
+    list-style: none;
+    text-align: center;
+}
+
+.nav3 ul li{
+    /* inline-block sbko ek hi line main laa deta hai */
+    display: inline-block; 
+    width: 150px;
+    position:relative;
+    z-index: 99; 
+}
+
+.nav3 ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    display: block;
+}
+
+.nav3 ul li a:hover{
+    color: var(--primary);
+}
+
+.nav3 ul li i{
+    color: blueviolet;
+    margin: 0px 5px;
+}
+
+
+
+/* // ab humne navigation toh create karli hai ab hume top jo navigation main use kara hai uski top ki down menu create karni hai  */
+
+.nav3 ul ul {
+    position: absolute;
+    top:70px;
+    left:0;
+    display: none;
+}
+
+.nav3 ul ul li{
+    background-color: white;
+    border-bottom: 1px solid var(--primary);
+}
+
+.nav3 ul li:hover>ul{
+    display: block;
+}
+/* featured features */
+.featured{
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(to right, rgba(0,0,0,1) 20%,rgba(255,255,255,0.2)), url('images/R-ecom/g1.jpg');
+    background-size: cover;
+    background-position: top;
+    position: relative;
+}
+
+/* yeh uske liye code hai jo picture main coming soon vaali line likhe hue hai usse niche le aaenge */
+.featured-text{
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: white;
+    text-align:center;
+    padding: 10px;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-family: 'Akaya Kanadaka', cursive;
+
+
+}
+
+.featured-text button{
+font-size: medium;
+padding : 10px,20px;
+border:none;
+outline:none;
+background-color: violet;
+margin: 20px 0px;
+color:white;
+}
+
+.latest{
+    padding: 50px 100px;
+
+}
+
+.product-intro{
+    text-align: center;
+}
+.product-intro h1{
+    color: var(--primary);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.product-intro h1 span{
+    color: var(--secondary);
+}
+
+.product-intro p{
+    color: grey;
+    margin: 15px  0px;
+}
+
+.card-container{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center; 
+   cursor: pointer;
+   margin: 4rem 0;
+   flex-wrap: wrap;
+}
+
+.card-container .card{
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+
+}
+
+.card img{
+   width: 100%;
+   transition: 0.5s ease-in-out;
+   /* yeh upar vaali line ka matlab samajna hai` */
+
+}
+
+.card i{
+    color: goldenrod;
+    margin: 10px 0;
+}
+
+.card button{
+   color: white;
+   background-color:  var(--secondary);
+   border: none;
+   outline: none;
+   margin-top: 15px;
+   padding:  5px 20px;  
+}
+
+.card:hover img, .card:hover h1{
+    width: 80%;
+    color: var(--primary);
+
+}
+
+.card::before{
+    content: '20% off';
+    width: 25%;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    position: absolute;
+    top:0;
+    left:0;
+background-color: var(--primary);
+    padding: 0px 4px;
+    transform: rotate(-20deg);
+
+}
+
+.trends{
+    padding: 50px 100px;
+    background-color: rgba(0,0,0,0.0);
+
+
+}
+
+.trends .swiper-container {
+    width: 100%;
+    padding: 50px;
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+footer{
+    background-color: var(--secondary);
+    color: white;
+    display: flex;
+    justify-content: space-around ;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align:center;
+    padding: 2rem;
+
+
+}
+
+footer div{
+     flex-basis:30%;
+
+}
+
+footer h1{
+    letter-spacing: 0.5rem;
+
+}
+
+footer h1 span{
+    color: var(--primary);
+}
+
+footer p{
+    font-size: 1rem;
+    
+}
+ footer i{
+    margin: 0px 5px;
+ }
+
+ /* ab responsiveness isme add karnege taaki agar hum isse mobile main khole toh aaram se khule */
+
+ /* yeh jo neeche likha hua hai voh important syntax hai responsiveness ke liye isme question pucha jaa skta hai */
+
+ /* isse jaise mobile main kholna toh sbki spacing kam kardenge like navigation main center ki , right-left ki sabki  change kardenge */
+
+ #sidenav{
+    display: none;
+ }
+ #menubar{
+    display: none;
+    
+ }
+ @media only screen and (max-width:769px){
+    .nav1{
+
+        
+        position:relative;
+        z-index: 2;
+        background-color: white;
+
+    
+    }
+    
+    .right i{
+        font-size: 15px;
+        margin: 0px 5px;
+
+
+
+
+    
+    }
+
+    .nav2{
+        width: 100%;
+        height: 80px;
+        
+    }
+    
+    
+    nav2 .nav2-left i{
+        margin-left: 0px;
+    }
+    
+    .nav2 .nav2-center h1{
+        color: var(--primary);
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    
+    
+    
+    
+    .nav2 .nav2-center p{
+        color: grey;
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    
+    .nav2 .nav2-right{
+        margin: 0px 5px;
+    }
+    .nav3{
+        display: none;
+
+    }
+
+    /* iss ya featured fixed karne se image fixed hojaati hai neeche karte samay. */
+    .featured{
+        background-attachment: fixed;
+    }
+
+    .latest{
+        padding: 0px 50px;
+    
+    }
+    
+    .product-intro{
+        text-align: center;
+    }
+    .product-intro h1{
+        color: var(--primary);
+        letter-spacing: 0.2rem;
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    
+    .product-intro h1 span{
+        color: var(--secondary);
+    }
+    
+    .product-intro p{
+        color: grey;
+        margin: 15px  0px;
+    }
+    
+    .card-container{
+       
+       cursor: pointer;
+       margin: 2rem 0;
+       
+    }
+    
+    .card-container .card{
+        /* yahan flex basis 100% karne se mobile main shoes ki image neeche upar dikhege vice versa jaise laptop main horizontal dikhte hai. */
+        flex-basis: 100%;
+        padding: 0.8rem;
+        position: relative;
+        text-align: center;
+    
+    }
+    
+    .card img{
+       width: 100%;
+       transition: 0.5s ease-in-out;
+       /* yeh upar vaali line ka matlab samajna hai` */
+    
+    }
+    
+    .card i{
+        color: goldenrod;
+        margin: 10px 0;
+    }
+    
+    .card button{
+       color: white;
+       background-color:  var(--secondary);
+       border: none;
+       outline: none;
+       margin-top: 15px;
+       padding:  5px 20px;  
+    }
+
+   
+    /* yeh headphones ko set karne ke liye hai */
+    .trends{
+        padding: 20px 50px;
+        background-color: rgba(0,0,0,0.0);
+    
+    
+    }
+    
+    .trends .swiper-container {
+        width: 100%;
+        padding: 50px;
+      }
+    
+      .trends .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 360px;
+        height: 360px;
+      }
+    
+      .trends .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    
+     footer div{
+        flex-basis: 50%;
+        margin: 10px 0;
+     }
+
+     /* ab menubar create karna hai */
+ }
